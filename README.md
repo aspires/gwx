@@ -10,4 +10,12 @@ you won't get blocked for sending a larger number of requests.
 About
 -----
 
+Weather data is a great way to expose new programmers to the broad functionality
+of APIs. The Google Weather API, though unofficial, is quite possibly the
+simplest, easiest weather data API available, making it ideal for brief
+demonstrations of programming and the Ruby language.
+
+Usage
+-----
+
 UNDER CONSTRUCTION FOR NOW
