@@ -17,6 +17,10 @@ class GoogleWeather
   def information
     @information = Information.new(@wx)
   end
+  
+  def forecast
+    @information = Forecast.new(@wx)
+  end
 
   private
 
