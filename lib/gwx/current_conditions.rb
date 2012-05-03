@@ -1,6 +1,6 @@
 class GoogleWeather::Current
   attr_accessor :current_conditions,:condition, :temp_f, :temp_c, :humidity, :icon, 
-  attr_accessor :wind_condition
+                :wind_condition
 
   def initialize(wx)
     @current_conditions ||= wx["current_conditions"]["data"]

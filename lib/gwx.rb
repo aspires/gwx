@@ -6,10 +6,16 @@ class GoogleWeather
   def initialize(location)
     result = validate_location(location)
     unless result.class == String
-      @wx ||= result
-    else
-      return result
+      @wx = result
     end
+  end
+  
+  def current
+    @current = Current.new(@wx)
+  end
+  
+  def information
+    @information = Information.new(@wx)
   end
 
   private
@@ -27,3 +33,8 @@ class GoogleWeather
   end
 
 end
+
+
+require_relative "gwx/current_conditions"
+require_relative "gwx/forecast_conditions"
+require_relative "gwx/forecast_information"
