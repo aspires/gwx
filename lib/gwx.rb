@@ -11,11 +11,11 @@ class GoogleWeather
   end
   
   def current
-    @current = Current.new(@wx)
+    @current ||= Current.new(@wx)
   end
   
   def information
-    @information = Information.new(@wx)
+    @information ||= Information.new(@wx)
   end
   
   def forecast

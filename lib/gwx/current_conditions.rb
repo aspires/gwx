@@ -7,26 +7,26 @@ class GoogleWeather::Current
   end
   
   def condition
-    @conditon = @current_conditions["condition"]["data"]
+    @conditon ||= @current_conditions["condition"]["data"]
   end
   
   def temp_f
-    @temp_f = @current_conditions["temp_f"]["data"].to_i
+    @temp_f ||= @current_conditions["temp_f"]["data"].to_i
   end
   
   def temp_c
-    @temp_c = @current_conditions["temp_c"]["data"].to_i
+    @temp_c ||= @current_conditions["temp_c"]["data"].to_i
   end
   
   def humidity
-    @humidity = @current_conditions["humidity"]["data"]
+    @humidity ||= @current_conditions["humidity"]["data"]
   end
   
   def icon
-    @icon = @current_conditions["icon"]["data"]
+    @icon ||= @current_conditions["icon"]["data"]
   end
   
   def wind_condition
-    @wind_condition = @current_conditions["wind_condition"]["data"]
+    @wind_condition ||= @current_conditions["wind_condition"]["data"]
   end
 end
