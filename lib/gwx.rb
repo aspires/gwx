@@ -19,7 +19,11 @@ class GoogleWeather
   end
   
   def forecast
-    @information = Forecast.new(@wx)
+    @forecast ||= Array.new
+    4.times do |day|
+      @forecast << Forecast.new(@wx, day)
+    end
+    @forecast
   end
 
   private
