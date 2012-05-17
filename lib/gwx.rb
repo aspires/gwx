@@ -11,15 +11,19 @@ class GoogleWeather
   end
   
   def current
-    @current = Current.new(@wx)
+    @current ||= Current.new(@wx)
   end
   
   def information
-    @information = Information.new(@wx)
+    @information ||= Information.new(@wx)
   end
   
   def forecast
-    @information = Forecast.new(@wx)
+    @forecast ||= Array.new
+    4.times do |day|
+      @forecast << Forecast.new(@wx, day)
+    end
+    @forecast
   end
 
   private

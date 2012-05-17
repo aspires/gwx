@@ -1,12 +1,12 @@
 class GoogleWeather::Forecast
-  attr_accessor :forecast_conditions, :day_of_the_week, :icon, :low, :high, :condition
+  attr_accessor :forecast_conditions, :day_of_week, :icon, :low, :high, :condition
 
-  def initialize(wx)
-    @forecast_conditions = wx["forecast_conditions"]["data"]
+  def initialize(wx, day)
+    @forecast_conditions = wx["forecast_conditions"][day]
   end
   
-  def day_of_the_week
-    @day_of_the_week = @forecast_conditions["day_of_the_week"]["data"]
+  def day_of_week
+    @day_of_week = @forecast_conditions["day_of_week"]["data"]
   end
   
   def icon
