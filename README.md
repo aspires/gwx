@@ -18,4 +18,4 @@ demonstrations of programming and the Ruby language.
 Usage
 -----
 
-UNDER CONSTRUCTION FOR NOW
+UNDR CONSTRUCTION FOR NOW
